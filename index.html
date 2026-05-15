@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>港隨台伴｜微代購 - 香港、閑魚專業代購服務</title>
+    <!-- 引入 Google 字體與 FontAwesome 圖標 -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --bg-dark: #070d1e;
+            --bg-card: rgba(18, 30, 61, 0.75);
+            --gold-primary: #dfb76c;
+            --gold-secondary: #f3e0be;
+            --text-light: #ffffff;
+            --text-muted: #cbd5e1;
+            --line-green: #06C755;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #070d1e 0%, #0c142b 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 40px;
+            background-attachment: fixed;
+        }
+
+        /* 頂部橫幅 Banner - 已嵌入您專屬的維港夜景圖 */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(180deg, rgba(7, 13, 30, 0.2) 0%, rgba(7, 13, 30, 0.9) 85%, #070d1e 100%), 
+                        url('https://googleusercontent.com') no-repeat center center;
+            background-size: cover;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(223, 183, 108, 0.3);
+        }
+
+        .hero-banner h1 {
+            font-size: 2.2rem;
+            color: var(--gold-secondary);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .hero-banner p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
+            font-weight: 500;
+            letter-spacing: 4px;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 3px 15px;
+            border-radius: 4px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* 主體內容容器 */
+        .container {
+            max-width: 600px;
+            margin: -20px auto 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* 台港夫妻簡介卡片 - 採用現代半透明玻璃質感 */
+        .intro-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(223, 183, 108, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+        }
+
+        .intro-card h2 {
+            color: var(--gold-primary);
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            letter-spacing: 1px;
+        }
+
+        .intro-card p {
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        /* 快速聯絡/按鈕區 */
+        .action-zone {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-line {
+            background: linear-gradient(90deg, #06C755 0%, #05b34c 100%);
+            color: white;
+        }
+
+        /* 購物須知區塊 */
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+            border-left: 4px solid var(--gold-primary);
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .policy-block {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .policy-list {
+            list-style: none;
+        }
+
+        .policy-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            text-align: justify;
+        }
+
+        .policy-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-list li::before {
+            content: "•";
+            color: var(--gold-primary);
+            font-weight: bold;
+            font-size: 1.4rem;
+            position: absolute;
+            left: 5px;
+            top: -2px;
+        }
+
+        .policy-list li strong {
+            color: var(--gold-secondary);
+        }
+
+        .badge-success {
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .badge-danger {
+            color: #f87171;
+            font-weight: bold;
+        }
+
+        /* 頁尾 */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #64748b;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部橫幅 (背景已完美載入維港圖) -->
+    <div class="hero-banner">
+        <h1>港隨台伴｜微代購</h1>
+        <p>連繫台港 ‧ 為您所想</p>
+    </div>
+
+    <div class="container">
+
+        <!-- 夫妻背景介紹 -->
+        <div class="intro-card">
+            <h2><i class="fa-solid fa-heart" style="color: #f87171;"></i> 台港夫妻 ‧ 用心經營</h2>
+            <p>感謝支持！本小舖由台灣人老婆（負責台灣出貨客服）與香港人老公（負責在地跑腿採買）共同經營。我們提供依委託人指定採買之「客製化代購服務」，不適用 7 天鑑賞期。下單即視同同意以下規範：</p>
+        </div>
+
+        <!-- 行動呼籲按鈕區 -->
+        <div class="action-zone">
+            <!-- 請將下面的 href 替換為您的 LINE 官方帳號實際連結 -->
+            <a href="https://lin.ee/8ktu7xq" class="btn btn-line" target="_blank">
+                <i class="fa-brands fa-line" style="font-size: 1.5rem;"></i> 點我加入官方 LINE 連線
+            </a>
+        </div>
+
+        <!-- 區塊一：物流與出貨 -->
+        <div class="section-title">
+            <i class="fa-solid fa-plane"></i> 物流與出貨 (需配合飛機日期)
+        </div>
+        <div class="policy-block">
+            <ul class="policy-list">
+                <li><strong>台灣買家</strong>：商品皆隨我們行李親自帶回，經由四大超商店到店或郵局出貨。</li>
+                <li><strong>香港買家</strong>：親自帶返香港，不受國際郵包限制，可面交或本地順豐到付。</li>
+                <li><strong>出貨檢查</strong>：出貨前會做簡單外觀檢查。托運難免擠壓，外盒完美主義者請三思。</li>
+            </ul>
+        </div>
+
+        <!-- 區塊二：安全與法規 -->
+        <div class="section-title">
+            <i class="fa-solid fa-shield-halved"></i> 安全與法規
+        </div>
+        <div class="policy-block">
+            <ul class="policy-list">
+                <li><span class="badge-success">✅ 必須親自購買</span>：為遵守海關法規，商品須由我們親自向實體店、官網或閑魚採買。</li>
+                <li><span class="badge-danger">❌ 絕不接受</span>代收包裹、代收貨、代匯款服務，敬請留意。</li>
+            </ul>
+        </div>
+
+        <!-- 區塊三：費用與議價 -->
+        <div class="section-title">
+            <i class="fa-solid fa-coins"></i> 費用與議價
+        </div>
+        <div class="policy-block">
+            <ul class="policy-list">
+                <li><strong>透明報價</strong>：無國際運費及關稅，大體積商品另有附加費。</li>
+                <li><strong>💡 閑魚代購</strong>：每張訂單僅收一次性車費；物品寄至內地代收點，每個包裹續收 5 元代收費。</li>
+                <li><span class="badge-danger">❌ 不接受議價</span>：因議價易遭賣家拉黑影響他人，此類訊息不予回應.</li>
+            </ul>
+        </div>
+
+        <!-- 區塊四：收費、付款與缺貨 -->
+        <div class="section-title">
+            <i class="fa-solid fa-credit-card"></i> 收費、付款與缺貨
+        </div>
+        <div class="policy-block">
+            <ul class="policy-list">
+                <li><strong>基本收費</strong>：商品 + 10% 代購費 (代購費低消台幣 200 元) + 網站運費/面交車費 + 台灣本地運費。</li>
+                <li><strong>訂金制度</strong>：須先付 50% (含) 以上訂金才安排採買，出貨前須付清全額尾款。</li>
+                <li><strong>缺貨退款</strong>：遇缺貨全額退款。若實體店代購已外出跑腿才遇缺貨，將酌收基本車費補貼。</li>
+            </ul>
+        </div>
+
+        <!-- 頁尾 -->
+        <div class="footer">
+            &copy; 2026 港隨台伴｜微代購 版權所有
+        </div>
+
+    </div>
+
+</body>
+</html>
