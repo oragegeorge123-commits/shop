@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>港隨台伴｜微代購 - 香港、閑魚專業代購服務</title>
+    <title>港隨台伴｜微代購 - 購物須知與免責聲明</title>
     <!-- 引入 Google 字體與 FontAwesome 圖標 -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
@@ -33,7 +33,7 @@
             background-attachment: fixed;
         }
 
-        /* 頂部橫幅 Banner - 已嵌入您專屬的維港夜景圖 */
+        /* 頂部橫幅 Banner - 嵌入維港夜景大圖 */
         .hero-banner {
             position: relative;
             background: linear-gradient(180deg, rgba(7, 13, 30, 0.2) 0%, rgba(7, 13, 30, 0.9) 85%, #070d1e 100%), 
@@ -79,7 +79,7 @@
             z-index: 10;
         }
 
-        /* 台港夫妻簡介卡片 - 採用現代半透明玻璃質感 */
+        /* 頂部引言卡片 */
         .intro-card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
@@ -92,22 +92,12 @@
             text-align: center;
         }
 
-        .intro-card h2 {
-            color: var(--gold-primary);
-            font-size: 1.3rem;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            letter-spacing: 1px;
-        }
-
         .intro-card p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #f1f5f9;
             text-align: justify;
             text-justify: inter-ideograph;
+            font-weight: 500;
         }
 
         /* 快速聯絡/按鈕區 */
@@ -142,7 +132,7 @@
             color: white;
         }
 
-        /* 購物須知區塊 */
+        /* 購物須知各個區塊 */
         .section-title {
             font-size: 1.2rem;
             color: var(--gold-primary);
@@ -161,51 +151,38 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 20px;
+            padding: 22px;
             margin-bottom: 25px;
             border: 1px solid rgba(255,255,255,0.08);
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
-        .policy-list {
-            list-style: none;
-        }
-
-        .policy-list li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 14px;
-            font-size: 0.95rem;
+        .policy-block p {
+            margin-bottom: 12px;
+            font-size: 0.98rem;
             color: #f1f5f9;
             text-align: justify;
         }
 
-        .policy-list li:last-child {
+        .policy-block p:last-child {
             margin-bottom: 0;
-        }
-
-        .policy-list li::before {
-            content: "•";
-            color: var(--gold-primary);
-            font-weight: bold;
-            font-size: 1.4rem;
-            position: absolute;
-            left: 5px;
-            top: -2px;
-        }
-
-        .policy-list li strong {
-            color: var(--gold-secondary);
-        }
-
-        .badge-success {
-            color: #4ade80;
-            font-weight: bold;
         }
 
         .badge-danger {
             color: #f87171;
             font-weight: bold;
+        }
+
+        /* 營業時間與提醒 */
+        .time-info {
+            background: rgba(223, 183, 108, 0.1);
+            border: 1px dashed var(--gold-primary);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--gold-secondary);
         }
 
         /* 頁尾 */
@@ -220,7 +197,7 @@
 </head>
 <body>
 
-    <!-- 頂部橫幅 (背景已完美載入維港圖) -->
+    <!-- 頂部橫幅 -->
     <div class="hero-banner">
         <h1>港隨台伴｜微代購</h1>
         <p>連繫台港 ‧ 為您所想</p>
@@ -228,65 +205,69 @@
 
     <div class="container">
 
-        <!-- 夫妻背景介紹 -->
+        <!-- 頂部引言 -->
         <div class="intro-card">
-            <h2><i class="fa-solid fa-heart" style="color: #f87171;"></i> 台港夫妻 ‧ 用心經營</h2>
-            <p>感謝支持！本小舖由台灣人老婆（負責台灣出貨客服）與香港人老公（負責在地跑腿採買）共同經營。我們提供依委託人指定採買之「客製化代購服務」，不適用 7 天鑑賞期。下單即視同同意以下規範：</p>
+            <p>感謝您對我們的支持！本小舖由台灣人老婆（負責台灣出貨客服）與香港人老公（負責在地跑腿採買）共同經營。提供依委託人指定採買之「客製化委託代購服務」。下單即視同 100% 同意以下規範，以保障雙方權益。</p>
         </div>
 
-        <!-- 行動呼籲按鈕區 -->
+        <!-- 官方 LINE 按鈕 -->
         <div class="action-zone">
-            <!-- 請將下面的 href 替換為您的 LINE 官方帳號實際連結 -->
-            <a href="https://lin.ee/8ktu7xq" class="btn btn-line" target="_blank">
+            <!-- 請將下面的 href 替換為您的 LINE 官方帳號實際加好友連結 -->
+            <a href="https://line.me" class="btn btn-line" target="_blank">
                 <i class="fa-brands fa-line" style="font-size: 1.5rem;"></i> 點我加入官方 LINE 連線
             </a>
         </div>
 
-        <!-- 區塊一：物流與出貨 -->
+        <!-- 區塊一：關於物流與出貨 -->
         <div class="section-title">
-            <i class="fa-solid fa-plane"></i> 物流與出貨 (需配合飛機日期)
+            <i class="fa-solid fa-plane"></i> ✈️ 【 關於物流與出貨 】(需配合我們的飛機日期)
         </div>
         <div class="policy-block">
-            <ul class="policy-list">
-                <li><strong>台灣買家</strong>：商品皆隨我們行李親自帶回，經由四大超商店到店或郵局出貨。</li>
-                <li><strong>香港買家</strong>：親自帶返香港，不受國際郵包限制，可面交或本地順豐到付。</li>
-                <li><strong>出貨檢查</strong>：出貨前會做簡單外觀檢查。托運難免擠壓，外盒完美主義者請三思。</li>
-            </ul>
+            <p><strong>1. 台灣買家：</strong>所有商品均隨我們的行李親自帶回台灣，並透過【便利商店（店到店）或郵局】進行國內出貨。</p>
+            <p><strong>2. 香港買家：</strong>非常歡迎香港朋友委託！商品由我們親自帶回香港（不受國際郵包限制），提供【指定地鐵站面交】或【本地順豐到付】。</p>
+            <p><strong>3. 出貨檢查：</strong>出貨前我們都會進行外觀簡單檢查，確保無表面明顯瑕疵。若有已知狀況會第一時間通知。行李托運難免有些微擠壓風險，外盒完美主義者下單前請三思。</p>
         </div>
 
-        <!-- 區塊二：安全與法規 -->
+        <!-- 區塊二：誠信安全與法規遵守 -->
         <div class="section-title">
-            <i class="fa-solid fa-shield-halved"></i> 安全與法規
+            <i class="fa-solid fa-shield-halved"></i> 🛡️ 【 誠信安全與法規遵守 】
         </div>
         <div class="policy-block">
-            <ul class="policy-list">
-                <li><span class="badge-success">✅ 必須親自購買</span>：為遵守海關法規，商品須由我們親自向實體店、官網或閑魚採買。</li>
-                <li><span class="badge-danger">❌ 絕不接受</span>代收包裹、代收貨、代匯款服務，敬請留意。</li>
-            </ul>
+            <p><strong>1. 嚴格親自採買：</strong>為確保行李完全符合台灣海關與法規，所有物品必須由我們【親自前往實體店或官網購買】。</p>
+            <p><span class="badge-danger"><strong>2. ❌ 絕不接受：</strong></span>任何形式的「代收包裹」、「代收貨」或「代匯款」服務，非經我方經手的貨品一律拒絕，敬請留意。</p>
         </div>
 
-        <!-- 區塊三：費用與議價 -->
+        <!-- 區塊三：費用與定價原則 -->
         <div class="section-title">
-            <i class="fa-solid fa-coins"></i> 費用與議價
+            <i class="fa-solid fa-coins"></i> 💰 【 費用與定價原則 】
         </div>
         <div class="policy-block">
-            <ul class="policy-list">
-                <li><strong>透明報價</strong>：無國際運費及關稅，大體積商品另有附加費。</li>
-                <li><strong>💡 閑魚代購</strong>：每張訂單僅收一次性車費；物品寄至內地代收點，每個包裹續收 5 元代收費。</li>
-                <li><span class="badge-danger">❌ 不接受議價</span>：因議價易遭賣家拉黑影響他人，此類訊息不予回應.</li>
-            </ul>
+            <p><strong>1. 一體化報價：</strong>我們不收取國際運費與關稅，所有費用均透明化顯示於報價單上。若商品尺寸/體積偏大，將有附加費用產生。</p>
+            <p><span class="badge-danger"><strong>2. ❌ 嚴禁議價：</strong></span>實在抱歉，我們不接受任何議價與協商。過去曾多次因議價導致賣家將我們拉黑，嚴重影響後續其他客人的購買權益，此類訊息將不予回應。</p>
         </div>
 
-        <!-- 區塊四：收費、付款與缺貨 -->
+        <!-- 區塊四：付款、退款與車資規範 -->
         <div class="section-title">
-            <i class="fa-solid fa-credit-card"></i> 收費、付款與缺貨
+            <i class="fa-solid fa-credit-card"></i> 💳 【 付款、退款與車資規範 】
         </div>
         <div class="policy-block">
-            <ul class="policy-list">
-                <li><strong>基本收費</strong>：商品 + 10% 代購費 (代購費低消台幣 200 元) + 網站運費/面交車費 + 台灣本地運費。</li>
-                <li><strong>訂金制度</strong>：須先付 50% (含) 以上訂金才安排採買，出貨前須付清全額尾款。</li>
-                <li><strong>缺貨退款</strong>：遇缺貨全額退款。若實體店代購已外出跑腿才遇缺貨，將酌收基本車費補貼。</li>
-            </ul>
+            <p><strong>1. 訂金制度：</strong>所有訂單皆須支付【總金額之 50%（含）以上作為訂金】，我們才會開始跑腿採買。出貨前必須付清全額尾款。</p>
+            <p><strong>2. 缺貨退款：</strong>若付款後遇到缺貨或店家問題導致無法順利購買，將會全額退款（若產生跨行轉帳手續費由我方吸收）。</p>
+            <p><strong>3. 車資補貼：</strong>若我們已親自出發前往該店家後才遇上缺貨，將會酌收部分外出的基本車費跑腿補貼（約 NT$50-100 ），敬請見諒。</p>
+        </div>
+
+        <!-- 區塊五：法律權益保障聲明 -->
+        <div class="section-title">
+            <i class="fa-solid fa-scale-balanced"></i> ⚖️ 【 法律權益保障聲明 】
+        </div>
+        <div class="policy-block">
+            <p>⭕️ 本小舖僅提供「委託代購服務」，乃依委託人指定前往採買之【客製化給付】，因此排除消保法 7 天鑑賞期之適用，非重大瑕疵恕不接受退換貨。</p>
+        </div>
+
+        <!-- 營業時間與提醒 -->
+        <div class="time-info">
+            <p><i class="fa-regular fa-clock"></i> <strong>⏰ 訊息回覆時間：</strong>每日 10:00 - 22:00</p>
+            <p style="margin-top: 5px; font-size: 0.9rem; opacity: 0.9;">連線期間若在採買中回覆較慢，敬請見諒！</p>
         </div>
 
         <!-- 頁尾 -->
